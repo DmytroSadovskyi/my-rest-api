@@ -8,7 +8,7 @@ const { ctrlWrapper } = require("../../helpers");
 
 const { isValidId, authenticate } = require("../../middlewares");
 
-router.get("/", authenticate, ctrlWrapper(ctrl.listContacts));
+router.get("/", authenticate, ctrlWrapper(ctrl.getAll));
 
 router.get("/:id", authenticate, isValidId, ctrlWrapper(ctrl.getById));
 
