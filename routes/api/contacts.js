@@ -25,4 +25,10 @@ router.patch(
 
 router.delete("/:id", authenticate, isValidId, ctrlWrapper(ctrl.removeContact));
 
+router.get("/hello", async (req, res, next) => {
+  res.send({
+    message: "Hello",
+  });
+});
+
 module.exports = router;
